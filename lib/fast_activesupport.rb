@@ -1,5 +1,6 @@
 require "fast_activesupport/version"
 
 module FastActivesupport
-  # Your code goes here...
 end
+
+require "fast_activesupport/fast_activesupport"
