@@ -1,5 +1,5 @@
 #include <ruby.h>
-#include <fast_activesupport_utils.h>
+#include "../fast_activesupport_utils.h"
 
 static VALUE rb_sha256;
 static ID id_hexdigest;

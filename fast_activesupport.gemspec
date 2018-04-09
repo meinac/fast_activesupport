@@ -18,7 +18,11 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features|benchmarks)/})
   end
 
-  spec.extensions    = %w[ext/fast_activesupport/extconf.rb]
+  spec.extensions    = %w[
+                        ext/fast_activesupport/extconf.rb
+                        ext/fast_activesupport/security_utils/extconf.rb
+                      ]
+
   spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
