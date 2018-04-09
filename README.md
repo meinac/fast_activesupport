@@ -1,8 +1,8 @@
-# FastActivesupport
+# Fast Activesupport
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fast_activesupport`. To experiment with that code, run `bin/console` for an interactive prompt.
+> This project is built for FUN and not tested in production environment yet. It's been almost 7 years since I stopped writing C therefore these implementations may not be best ones in terms of performance and code quality. Also the behvaiours of the implementations may vary even especially for the error cases like passing the wrong type of argument.
 
-TODO: Delete this and the text above, and describe your gem
+ActiveSupport implemented in C from scratch for speeding it up.
 
 ## Installation
 
@@ -22,7 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem overrides original ActiveSupport and changes it's methods with the ones written in C. The only thing you have to do is, placing this gem after `activesupport` or `rails` in your Gemfile.
+
+## The list of improved modules/methods
+
+Here is the list of modules and their methods migrated from Ruby to C along with performance improvements.
+
++ SecurityUtils
+  + ::secure_compare (~4 times faster)
+  + ::fixed_length_secure_compare (~6.5 times faster)
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fast_activesupport.
+Bug reports and pull requests are welcome on GitHub at https://github.com/meinac/fast_activesupport.
 
 ## License
 
