@@ -22,10 +22,16 @@ static int fixed_length_secure_compare(VALUE a, VALUE b) {
 }
 
 static VALUE rb_fixed_length_secure_compare(VALUE self, VALUE a, VALUE b) {
+  Check_Type(a, T_STRING);
+  Check_Type(b, T_STRING);
+
   return fixed_length_secure_compare(a, b) ? Qtrue : Qfalse;
 }
 
 static VALUE rb_secure_compare(VALUE self, VALUE a, VALUE b) {
+  Check_Type(a, T_STRING);
+  Check_Type(b, T_STRING);
+
   VALUE rb_mDigest = rb_path2class("Digest");
   VALUE rb_sha256 = rb_const_get(rb_mDigest, rb_intern("SHA256"));
 
