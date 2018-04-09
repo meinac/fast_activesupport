@@ -29,7 +29,7 @@ This gem overrides original ActiveSupport and changes it's methods with the ones
 Here is the list of modules and their methods migrated from Ruby to C along with performance improvements.
 
 + SecurityUtils
-  + ::secure_compare (~4 times faster)
+  + ::secure_compare (~4.2 times faster)
   + ::fixed_length_secure_compare (~6.5 times faster)
 
 ## Development
