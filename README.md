@@ -1,6 +1,6 @@
 # Fast Activesupport
 
-> This project is built for FUN and not tested in production environment yet. It's been almost 7 years since I stopped writing C therefore these implementations may not be best ones in terms of performance and code quality. Also the behvaiours of the implementations may vary even especially for the error cases like passing the wrong type of argument.
+> This project is built for FUN and not tested in production environment yet. It's been almost 7 years since I stopped writing C therefore these implementations may not be the best ones in terms of performance and code quality. Also the behvaiours of the implementations may vary especially for the error cases like passing the wrong type of argument.
 
 ActiveSupport implemented in C from scratch for speeding it up.
 
