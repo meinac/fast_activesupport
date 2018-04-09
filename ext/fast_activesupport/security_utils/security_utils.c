@@ -47,8 +47,7 @@ static VALUE rb_secure_compare(VALUE self, VALUE a, VALUE b) {
 
 void Init_security_utils() {
   rb_require("digest");
-  VALUE active_support = rb_define_module("ActiveSupport");
-  VALUE security_utils = rb_define_module_under(active_support, "SecurityUtils");
+  VALUE security_utils = rb_define_module_under(ACTIVE_SUPPORT, "SecurityUtils");
 
   VALUE rb_mDigest = rb_path2class("Digest");
   rb_sha256 = rb_const_get(rb_mDigest, rb_intern("SHA256"));
