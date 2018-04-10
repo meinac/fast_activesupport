@@ -1,4 +1,4 @@
-require_relative '../../benchmark.rb'
+require_relative '../../../benchmark.rb'
 
 require 'active_support/core_ext/string/access'
 require 'fast_activesupport/core_ext/string/access'
