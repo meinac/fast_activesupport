@@ -28,6 +28,9 @@ This gem overrides original ActiveSupport and changes it's methods with the ones
 
 Here is the list of modules and their methods migrated from Ruby to C along with performance improvements.
 
+> Following results obtained by comparing the C implementations with `activesupport 6.0.0.alpha` using `ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin16]` on `MacBook Pro (Retina, 15-inch, Mid 2015) 2,2 GHz Intel Core i7 16 GB 1600 MHz DDR3`. You can run all the benchmarks by yourself by cloning the repository into your local environment and running the ruby scripts under the **benchmarks/** directory like so;
+`ruby benchmarks/the_name_of_the_benchmark.rb`
+
 + String
   + #first
     + Without argument (**~2.7 times faster**)
