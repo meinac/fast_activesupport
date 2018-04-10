@@ -11,5 +11,5 @@ Rake::ExtensionTask.new "fast_activesupport" do |ext|
 end
 
 Rake::ExtensionTask.new "fast_activesupport/security_utils" do |ext|
-  ext.lib_dir = "lib/fast_activesupport"
+  ext.lib_dir = "lib/"
 end

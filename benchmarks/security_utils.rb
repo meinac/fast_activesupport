@@ -1,6 +1,7 @@
 require_relative 'benchmark.rb'
 
 require 'active_support/security_utils'
+require 'fast_activesupport/security_utils'
 
 FastActiveSupportBenchmark.ips('fixed_length_secure_compare') do |b|
   b.report('fast fixed length') do

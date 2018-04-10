@@ -16,8 +16,6 @@ gemfile(true) do
   gem 'fast_activesupport', path: PATH
 end
 
-require 'fast_activesupport/security_utils'
-
 class FastActiveSupportBenchmark
 
   class << self
