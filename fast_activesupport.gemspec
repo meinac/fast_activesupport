@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
   spec.extensions    = %w[
                         ext/fast_activesupport/extconf.rb
                         ext/fast_activesupport/security_utils/extconf.rb
+                        ext/fast_activesupport/core_ext/string/access/extconf.rb
                       ]
 
   spec.bindir        = "bin"
