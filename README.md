@@ -32,6 +32,12 @@ Here is the list of modules and their methods migrated from Ruby to C along with
 `ruby benchmarks/the_name_of_the_benchmark.rb`
 
 + String
+  + #from
+    + With argument equal or more than the length of the string (**~1.9 times faster**)
+    + With argument less than the length of the string (**~1.6 times faster**)
+  + #to
+    + With argument equal or more than the length of the string (**~1.6 times faster**)
+    + With argument less than the length of the string (**~1.6 times faster**)
   + #first
     + Without argument (**~2.7 times faster**)
     + With argument equal or more than the length of the string (**same-ish**)

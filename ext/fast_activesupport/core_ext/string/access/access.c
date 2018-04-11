@@ -1,6 +1,14 @@
 #include <ruby.h>
 #include "../../../fast_activesupport_utils.h"
 
+static VALUE rb_from(VALUE self, VALUE from) {
+  return rb_str_substr(self, NUM2LONG(from), RSTRING_LEN(self));
+}
+
+static VALUE rb_to(VALUE self, VALUE to) {
+  return rb_str_substr(self, 0, NUM2LONG(to) + 1);
+}
+
 static VALUE rb_last(int argc, const VALUE *argv, VALUE self) {
   rb_check_arity(argc, 0, 1);
   long str_len = RSTRING_LEN(self);
@@ -38,6 +46,8 @@ static VALUE rb_first(int argc, const VALUE *argv, VALUE self) {
 }
 
 void Init_access() {
+  rb_define_method(rb_cString, method_name_for("from"), rb_from, 1);
+  rb_define_method(rb_cString, method_name_for("to"), rb_to, 1);
   rb_define_method(rb_cString, method_name_for("first"), rb_first, -1);
   rb_define_method(rb_cString, method_name_for("last"), rb_last, -1);
 }
