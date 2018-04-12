@@ -22,7 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-This gem overrides original ActiveSupport and changes it's methods with the ones written in C. The only thing you have to do is, placing this gem after `activesupport` or `rails` in your Gemfile.
+This gem overrides original ActiveSupport and changes it's methods with the ones written in C. To use the improved methods you should require them one by one or all at once like so;
+
+```ruby
+require "fast_activesupport"
+require "fast_activesupport/all"
+```
 
 ## The list of improved modules/methods
 
