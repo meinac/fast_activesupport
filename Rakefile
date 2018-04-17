@@ -17,3 +17,7 @@ end
 Rake::ExtensionTask.new "fast_activesupport/core_ext/string/access" do |ext|
   ext.lib_dir = "lib/"
 end
+
+Rake::ExtensionTask.new "fast_activesupport/core_ext/string/exclude" do |ext|
+  ext.lib_dir = "lib/"
+end

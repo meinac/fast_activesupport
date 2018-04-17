@@ -51,6 +51,11 @@ Here is the list of modules and their methods migrated from Ruby to C along with
     + Without argument (**~2.9 times faster**)
     + With argument equal or more than the length of the string (**same-ish**)
     + With argument less than the length of the string (**~1.9 times faster**)
+  + #exclude?
+    + With single char string which exists in (**~1.6 times faster**)
+    + With single char string which does not exist (**~1.3 times faster**)
+    + With string more than one char which exists in (**~1.6 times faster**)
+    + With string more than one char which does not exist (**~1.4 times faster**)
 + SecurityUtils
   + ::secure_compare (**~4.2 times faster**)
   + ::fixed_length_secure_compare (**~6.5 times faster**)
